@@ -25,7 +25,7 @@ size_t	ft_get_len(int	n)
 	return (len);
 }
 
-void	ft_free_str(size_t len, char *str, int n, int neg)
+void	ft_build_str(size_t len, char *str, int n, int neg)
 {
 	str[len] = '\0';
 	while (len--)
@@ -45,12 +45,11 @@ char	*ft_itoa(int n)
 
 	neg = 0;
 	if (n < 0)
-		neg = 1;
+		neg = 1;i
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
-	len = ft_get_len(n);
-	len += neg;
+	len = ft_get_len(n) + neg;
 	str = (char *)malloc(sizeof(char) * len);
-	ft_free_str(len, str, n, neg);
+	ft_build_str(len, str, n, neg);
 	return (str);
 }
