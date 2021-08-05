@@ -6,7 +6,7 @@
 /*   By: acastril <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 13:11:47 by acastril          #+#    #+#             */
-/*   Updated: 2021/08/04 15:43:05 by acastril         ###   ########.fr       */
+/*   Updated: 2021/08/05 14:08:35 by acastril         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,18 @@ char	*ft_itoa(int n)
 
 	neg = 0;
 	if (n < 0)
-		neg = 1;i
+	{
+		neg = 1;
+		n *= -1;
+	}
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	len = ft_get_len(n) + neg;
-	str = (char *)malloc(sizeof(char) * len);
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (0);
 	ft_build_str(len, str, n, neg);
 	return (str);
 }

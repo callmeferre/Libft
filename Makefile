@@ -6,7 +6,7 @@
 #    By: acastril <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/04 11:29:49 by acastril          #+#    #+#              #
-#    Updated: 2021/08/04 11:45:38 by acastril         ###   ########.fr        #
+#    Updated: 2021/08/05 15:18:02 by acastril         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,26 +50,34 @@ SRCS = ft_isalpha.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
+			ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
 
-OBJS	= ${SRCS:.c=.o}
+OBJS	= $(SRCS:.c=.o)
 
 RM		= rm -f
 
 .c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-${NAME}:	${OBJS}
-			ar -vcrs ${NAME} ${OBJS}
+$(NAME):	$(OBJS)
+			ar -vcrs $(NAME) $(OBJS)
 
-all:		${NAME}
+all:		$(NAME)
 
-run:		./${NAME}
+run:		./$(NAME)
 
 clean:
-			${RM} ${OBJS}
+			$(RM) $(OBJS)
 
 fclean:		clean
-			${RM} ${NAME}
+			$(RM) $(NAME)
 
 re: 		fclean all
 

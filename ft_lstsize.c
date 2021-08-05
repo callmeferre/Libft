@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acastril <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 12:28:54 by acastril          #+#    #+#             */
-/*   Updated: 2021/07/29 15:27:27 by acastril         ###   ########.fr       */
+/*   Created: 2021/08/05 11:55:13 by acastril          #+#    #+#             */
+/*   Updated: 2021/08/05 12:04:27 by acastril         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int	c)
+int	ft_lstsize(t_list *lst)
 {
-	int		i;
-	char	*str;
-	char	find;
+	int	size;
 
-	str = (char *)s;
-	find = (char)c;
-	i = ft_strlen(str);
-	while (i > 0)
+	size = 0;
+	while (lst)
 	{
-		if (str[i] == find)
-			return ((char *)str + i);
-		i--;
+		lst = lst->next;
+		size++;
 	}
-	if (str[i] == find)
-		return ((char *)str + i);
-	return (0);
+	return (size);
 }
