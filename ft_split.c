@@ -6,7 +6,7 @@
 /*   By: acastril <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 12:26:12 by acastril          #+#    #+#             */
-/*   Updated: 2021/08/04 11:44:41 by acastril         ###   ########.fr       */
+/*   Updated: 2021/08/06 11:01:42 by acastril         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	**ft_split(char const *s, char c)
 	size_t	n;
 	size_t	len;
 
+	if (!s)
+		return (0);
 	str_n = ft_count_strings(s, c);
 	split = (char **)malloc(sizeof(char *) * (str_n + 1));
 	if (!split)
