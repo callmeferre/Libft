@@ -38,5 +38,7 @@ atoi
 calloc
 strdup
 
+This work is published under the terms of **[42 Unlicense](https://github.com/gcamerli/42unlicense)**.
+
 [1]: https://github.com/callmeferre/Libft/blob/master/en.subject.pdf "Libft PDF"
 [2]:https://www.42madrid.com/en/ "42 Madrid"
