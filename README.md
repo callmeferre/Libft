@@ -6,10 +6,11 @@
 
 [Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
+### Functions
+
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
-4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
 
 Libc functions | Additional functions | Bonus Functions
 :----------- | :-----------: | :-----------:
