@@ -1,6 +1,6 @@
 # Libft
 
-[![made with C](https://forthebadge.com/images/badges/uses-c.svg)](https://forthebadge.com)
+[![made with C](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
 
 ### What is libft?
 
