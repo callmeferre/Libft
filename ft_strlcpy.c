@@ -12,15 +12,6 @@
 
 #include "libft.h"
 
-char	*ft_endofcpy(char *dest, char *src, size_t dstsize)
-{
-	if (dstsize != 0)
-		*dest = '\0';
-	while (*src != 0)
-		src++;
-	return (src);
-}
-
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
 	char	*c;
@@ -41,7 +32,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 			src++;
 		}
 	}
-	if (r == 0)
-		src = ft_endofcpy(dest, (char *)src, dstsize);
+	if (dstsize != 0)
+		*dest = '\0';
+	while (*src != 0)
+		src++;
 	return (src - c);
 }
